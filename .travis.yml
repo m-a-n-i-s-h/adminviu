@@ -1,5 +1,7 @@
 language: node_js
-
+env:
+  global:
+    CC_TEST_REPORTER_ID=38d040f5e11958147f33bec46aed0f9f3403b2f11bba064d68a72ca7ea99d6ca
 node_js:
   - 8.2.1
 dist: trusty
