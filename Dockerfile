@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update
-RUN apk add nodejs npm curl bash yarn
+RUN apk add nodejs npm curl bash yarn git 
 RUN yarn global add nyc
 WORKDIR /app
 COPY . .
