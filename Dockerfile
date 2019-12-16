@@ -1,7 +1,8 @@
 FROM apline:latest
 
 RUN apk update
-RUN apk add nodejs npm nyc curl bash
+RUN apk add nodejs npm curl bash yarn
+RUN yarn global add nyc
 WORKDIR /app
 COPY . .
 
