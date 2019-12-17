@@ -1,12 +1,12 @@
-FROM alpine:latest
+FROM node:8
 
-RUN apk update
-RUN apk add nodejs npm curl bash yarn git 
-RUN yarn global add nyc
 WORKDIR /app
 COPY . .
 
-RUN npm install
+RUN yarn install
+RUN yarn add nyc
+#RUN  nyc --reporter=lcov yarn run unit
+
 RUN curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 >> ./cc-test-reporter
 RUN chmod +x ./cc-test-reporter
 
