@@ -4,8 +4,8 @@ WORKDIR /app
 COPY . .
 
 RUN yarn install
-RUN yarn add nyc
-RUN global add nyc
+#RUN yarn add nyc
+RUN yarn global add nyc
 #RUN npm i nyc -g
 
 RUN  nyc --reporter=lcov yarn run unit
