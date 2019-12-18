@@ -5,7 +5,8 @@ COPY . .
 
 RUN yarn install
 RUN yarn add nyc
-RUN npm i nyc -g
+RUN global add nyc
+#RUN npm i nyc -g
 
 RUN  nyc --reporter=lcov yarn run unit
 
