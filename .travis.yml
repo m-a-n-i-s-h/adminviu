@@ -18,8 +18,8 @@ script:
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT --debug
-  - ll 
-  - ll coverage
+  - ls -al 
+  - ls -al coverage
 
 notifications:
   email: false
