@@ -28,4 +28,3 @@ RUN nyc --reporter=lcov yarn run unit
 
 #Upload test report to specific reporter ID
 RUN ./cc-test-reporter after-build --exit-code $?
-
